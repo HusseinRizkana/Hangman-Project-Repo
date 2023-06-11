@@ -71,8 +71,39 @@ hangman = Hangman(word_list=word_list)
 hangman.ask_for_input()
 ```
 - the ask_for_input() function is the function running the main loop of the game. The user is prompted to input a letter to make a guess.
+
+```
+hangman._check_guess(guess)
+```
+- the _check_guess() function is an internal function used for checking if the guessed letter is in the hidden word
+
+
+## Milestone 5
+- The Hangman class has been abstracted to
+```
+word_list = ["apple","pear","banana","mango","watermelon"]
+
+play_game(word_list)
+```
+- the play_game() function removes the Hangman class boiler-plate for initialising and allows for a smoother user experience. This is done through the default setting of num_lives to 5 and creating a loop the the user to go through with a win and lose scenario.
+
+## Playing the game
+- To play the game all the user has to do is run the milestone_5.py python file. This will launch the game in terminal with the given word list of 5 fruits. 
+1. A word from the five given fruits will be chosen at random 
+2. The user will be prompted to enter a letter in the terminal. 
+```
+what is your guess?:  
+```
+3. The user should enter a character and presses enter
+4. If the entry is a valid entry (single alphabetical letter) the game will print whether the guess is in the word or not otherwise the user will be prompted to enter another valid guess
+5. This repeats until the win condition of the user guessing all the letters of the word or the lose condition of the user running out of lives
+
 ## Conclusions
 ---
-This is a working simple hangman project. This code has only one class in milestone_4.py and therefore no further simplification is required.
+- This is a working simple hangman project. This code has only one class defined in milestone_5.py and therefore no further simplification is required.
 
-Adaptations on this project my include keeping score of different rounds, having times rounds and perhaps adding in a user interface other than the terminal to aid in the userfriendliness of the game.
+- Adaptations on this project may include the following:
+- Adaptations to the game: keeping score of different rounds to keep track of highscores or adding timed rounds
+- Developments to useability: adding in a user interface other than the terminal to aid in the userfriendliness of the game.
+- Increasing code maintainability:
+  applying unit tests to avoid regressional errors upon further development.
