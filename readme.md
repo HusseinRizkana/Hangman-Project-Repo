@@ -47,14 +47,32 @@ what is your guess?:
 
 
 
-## Milestone n
+## Milestone 3
 ---
-Continue this process for every milestone, making sure to display clear understanding of each task and the concepts behind them as well as understanding of the technologies used.
+- Created a class called Hangman(). Inside the class, an init method was created to initialise the attributes of the class to pass in word_list and num_lives as parameters. num_lives defaults to 5.
 
-Also don't forget to include code snippets and screenshots of the system you are building, it gives proof as well as it being an easy way to evidence your experience!
+- attributes of the Hangman() class:
+1. word: The word to be guessed, picked randomly from the word_list. Remember to import the random module into your script.
 
+2. word_guessed: list - A list of the letters of the word, with for each letter not yet guessed. For example, if the word is 'apple', the word_guessed list would be ['', '', '', '', '']. If the player guesses 'a', the list would be ['a', '', '', '', ''].
+
+3. num_letters: int - The number of UNIQUE letters in the word that have not been guessed yet.
+
+4. num_lives: int - The number of lives the player has at the start of the game.
+
+5. word_list: list - A list of words.
+
+6. list_of_guesses: list - A list of the guesses that have already been tried. Set this to an empty list initially.
+
+- The hangman class has two functions 
+```
+word_list = ["apple","pear","banana","mango","watermelon"]
+hangman = Hangman(word_list=word_list)
+hangman.ask_for_input()
+```
+- the ask_for_input() function is the function running the main loop of the game. The user is prompted to input a letter to make a guess.
 ## Conclusions
 ---
-Maybe write a conclusion to the project, what you understood about it and also how you would improve it or take it further.
+This is a working simple hangman project. This code has only one class in milestone_4.py and therefore no further simplification is required.
 
-Read through your documentation, do you understand everything you've written? Is everything clear and cohesive?
+Adaptations on this project my include keeping score of different rounds, having times rounds and perhaps adding in a user interface other than the terminal to aid in the userfriendliness of the game.
