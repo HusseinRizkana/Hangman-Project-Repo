@@ -19,19 +19,33 @@ word = random.choice(word_list)
 
 ## Milestone 2
 ---
-- Does what you have built in this milestone connect to the previous one? If so explain how. What technologies are used? Why have you used them? Have you run any commands in the terminal? If so insert them using backticks (To get syntax highlighting for code snippets add the language after the first backticks).
+- The user input function which takes in user input and checks its validity returning whether the response or valid or asking for a different response if the response is not valid. 
+``` 
+ask_for_input()   
+```
+- For valid responses the function prints whether the letter input is in the hidden word or not.
 
 - Example below:
 
-``` 
-/bin/kafka-topics.sh --list --zookeeper 127.0.0.1:2181 
+```
+what is your guess?:  a
+Good guess! a is in the word.
+```
+```
+what is your guess?:  b
+Sorry, b is not in the word. Try again.
+```
+- For invalid responses the function prints requests a valid response and the user is prompted to input a single alphabetical letter.
+
+- Example below:
+```
+what is your guess?:  11
+invalid letter. Please, enter a single alphabetical character
+what is your guess?:  
 ```
 
-- The above command is used to check whether the topic has been created successfully, once confirmed the API script is edited to send data to the created kafka topic. The docker container has an attached volume which allows editing of files to persist on the container. The result of this is below:
-```
-"""Insert your code here"""
-```
-Insert screenshot of what you have built working.
+
+
 
 ## Milestone n
 ---
