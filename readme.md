@@ -1,5 +1,6 @@
-# Example Project Documentation Guideline
-> This is a terminal hangman game where the user can guess letter by letter from the console the hidden word. After the set number of guesses are used or the word is guessed fully the player loses or wins respectively. This game was developed in python. 
+# Hangman-Cli Game
+> This is a terminal hangman game where the user can guess letter by letter from the console the hidden word. After the set number of guesses are used or the word is guessed fully the player loses or wins respectively. This game was developed in python and uses the Random python library, specifically the Random.choice() module.
+
 
 ## Milestone 1
 ---
@@ -14,7 +15,7 @@ word_list = ["apple","pear","banana","mango","watermelon"]
 word = random.choice(word_list)
 ```
 
-- a user is prompted to make a guess by inputting a single letter.
+- A user is prompted to make a guess by inputting a single letter.
 
 
 ## Milestone 2
@@ -51,7 +52,7 @@ what is your guess?:
 ---
 - Created a class called Hangman(). Inside the class, an init method was created to initialise the attributes of the class to pass in word_list and num_lives as parameters. num_lives defaults to 5.
 
-- attributes of the Hangman() class:
+- Attributes of the Hangman() class:
 1. word: The word to be guessed, picked randomly from the word_list. Remember to import the random module into your script.
 
 2. word_guessed: list - A list of the letters of the word, with for each letter not yet guessed. For example, if the word is 'apple', the word_guessed list would be ['', '', '', '', '']. If the player guesses 'a', the list would be ['a', '', '', '', ''].
@@ -70,12 +71,12 @@ word_list = ["apple","pear","banana","mango","watermelon"]
 hangman = Hangman(word_list=word_list)
 hangman.ask_for_input()
 ```
-- the ask_for_input() function is the function running the main loop of the game. The user is prompted to input a letter to make a guess.
+- The ask_for_input() function is the function running the main loop of the game. The user is prompted to input a letter to make a guess.
 
 ```
 hangman._check_guess(guess)
 ```
-- the _check_guess() function is an internal function used for checking if the guessed letter is in the hidden word
+- The _check_guess() function is an internal function used for checking if the guessed letter is in the hidden word
 
 
 ## Milestone 5
@@ -85,7 +86,7 @@ word_list = ["apple","pear","banana","mango","watermelon"]
 
 play_game(word_list)
 ```
-- the play_game() function removes the Hangman class boiler-plate for initialising and allows for a smoother user experience. This is done through the default setting of num_lives to 5 and creating a loop the the user to go through with a win and lose scenario.
+- The play_game() function removes the Hangman class boiler-plate for initialising and allows for a smoother user experience. This is done through the default setting of num_lives to 5 and creating a loop the the user to go through with a win and lose scenario.
 
 ## Playing the game
 - To play the game all the user has to do is run the milestone_5.py python file. This will launch the game in terminal with the given word list of 5 fruits. 
