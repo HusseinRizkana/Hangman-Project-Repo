@@ -46,7 +46,6 @@ class Hangman:
             single letter input
         """
         if guess in self.word:
-            # if guessed letter is in the word
             print(f"Good guess! {guess} is in the word")
             for i in range(len(self.word)):
                 # add the letter in the appropriate place instead of the "_" 
@@ -67,12 +66,11 @@ class Hangman:
         Main loop of game asks user for input and checks if the input 
         is valid or in the word then adjusts hangman attributes accordingly
         """
-        # retrieve user guess 
         guess =  input("guess a letter:  ")
     
         #check that the guess is a single alphabetical letter and inform user if
         #otherwise
-        if not guess.isalpha() and len(guess)==1:
+        if not guess.isalpha() or len(guess)!=1:
             print("invalid letter. Please, enter a single alphabetical character")
         # if valid input check if it is a repeat guess
         elif guess in self.list_of_guesses: 
@@ -80,7 +78,6 @@ class Hangman:
         else:
         # if input is a valid new guess check if the letter is in the word
             self._check_guess(guess)
-        # add the guessed letter to the list of guessed letters
             self.list_of_guesses.append(guess)
     
 def play_game(word_list):
